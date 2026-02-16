@@ -1,10 +1,30 @@
 <script setup>
 import { ref } from 'vue'
-const title = ref('Hello There ✋')
+import LinkCard from '@/components/LinkCard.vue'
+
+const profile = ref({
+  name: 'Sergio D. Morfin',
+  slogan: 'Dealing with stuff one day at a time...',
+  avatar:
+    'https://image2url.com/r2/default/images/1771214454336-60871f05-b319-41e5-8c26-740113ccee98.webp',
+})
 </script>
 
 <template>
-  <main class="flex flex-1 items-center justify-center">
-    <h1 class="text-6xl font-thin text-slate-800">{{ title }}</h1>
+  <main class="flex min-h-screen flex-col items-center px-4 py-8">
+    <!-- Profile Header-->
+    <div class="mb-8 flex flex-col items-center">
+      <div
+        class="mb-4 h-48 w-48 overflow-hidden rounded-full border-4 border-blue-200 shadow-lg shadow-blue-400/90"
+      >
+        <img
+          :src="profile.avatar"
+          :alt="profile.name"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <hl class="font-display font-bold">{{ profile.name }}</hl>
+      <p>{{ profile.slogan }}</p>
+    </div>
   </main>
 </template>
