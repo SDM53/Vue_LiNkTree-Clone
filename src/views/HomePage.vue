@@ -23,8 +23,8 @@ const profile = ref({
           class="h-full w-full object-cover"
         />
       </div>
-      <hl class="font-display font-bold">{{ profile.name }}</hl>
-      <p>{{ profile.slogan }}</p>
+      <h1 class="mb-2 font-display text-2xl font-bold text-blue-200">{{ profile.name }}</h1>
+      <p class="max-w -xs text-blue-50">{{ profile.slogan }}</p>
     </div>
   </main>
 </template>
