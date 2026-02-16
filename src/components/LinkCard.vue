@@ -3,18 +3,18 @@
     href="#"
     target="_blank"
     rel="noopener noreferrer"
-    class="flex w-full items-center gap-4 rounded-xl border border-blue-400 bg-blue-200 p-4 shadow-lg shadow-blue-400/90 transition-all duration-200 hover:scale-[1.05] hover:border-blue-50 hover:shadow-xl hover:shadow-blue-100/90"
+    class="group relative flex w-full items-center gap-4 rounded-xl border border-blue-400 bg-blue-200 p-4 shadow-lg shadow-blue-400/90 transition-all duration-200 hover:scale-[1.05] hover:border-blue-50 hover:shadow-xl hover:shadow-blue-100/90"
   >
     <!-- Icon -->
     <div
-      class="item center round-lg flex h-12 w-12 shrink-0 justify-center bg-blue-100 text-blue-400"
+      class="item center round-lg group-hover:blue-600/90 flex h-12 w-12 shrink-0 justify-center bg-blue-100 text-blue-400 transition-all duration-200 group-hover:scale-120 group-hover:bg-blue-400 group-hover:text-blue-100 group-hover:shadow-xl group-hover:shadow-blue-500/40"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        class="h-12 w-12"
+        class="h-10.5 w-10.5 transition-transform duration-200 group-hover:rotate-10"
       >
         <!-- Icon from SVG Spinners by Utkarsh Verma - https://github.com/n3r4zzurr0/svg-spinners/blob/main/LICENSE -->
         <rect
@@ -148,5 +148,10 @@
       <h3 class="truncate font-display font-semibold text-blue-50">Link Text</h3>
       <p class="test-sm truncate text-blue-400">Text Stuff Here</p>
     </div>
+
+    <!-- Hover Glow Effect -->
+    <div
+      class="absolute inset-0 rounded-xl bg-linear-to-r from-blue-50/50 via-blue-400/20 to-blue-50/50 opacity-0 transition-opacity group-hover:opacity-100"
+    />
   </a>
 </template>
