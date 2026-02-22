@@ -7,6 +7,20 @@ const profile = ref({
   slogan: 'Dealing with stuff one day at a time...',
   avatar:
     'https://image2url.com/r2/default/images/1771214454336-60871f05-b319-41e5-8c26-740113ccee98.webp',
+  links: [
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/SDM53?tab=repositories',
+      description: 'Check out my projects on GitHub!',
+    },
+    {
+      id: 2,
+      title: 'Youtube',
+      url: 'https://www.youtube.com/watch?v=tAe24CS-NCY&t=1s',
+      description: 'Check out how this was made on YouTube!',
+    },
+  ],
 })
 </script>
 
@@ -32,8 +46,11 @@ const profile = ref({
     <!-- Link List -->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
       />
     </div>
 

@@ -1,6 +1,23 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    default: 'Need Text Here',
+  },
+})
+</script>
+
 <template>
   <a
-    href="#"
+    :href="url"
     target="_blank"
     rel="noopener noreferrer"
     class="group relative flex w-full items-center gap-4 rounded-xl border border-blue-400 bg-blue-200 p-4 shadow-lg shadow-blue-400/90 transition-all duration-200 hover:scale-[1.05] hover:border-blue-50 hover:shadow-xl hover:shadow-blue-100/90"
@@ -145,8 +162,8 @@
 
     <!-- Text -->
     <div class="min-w-0 flex-1">
-      <h3 class="truncate font-display font-semibold text-blue-50">Link Text</h3>
-      <p class="test-sm truncate text-blue-400">Text Stuff Here</p>
+      <h3 class="truncate font-display font-semibold text-blue-500">{{ title }}</h3>
+      <p class="test-sm truncate text-blue-400">{{ description }}</p>
     </div>
 
     <!-- Hover Glow Effect -->
